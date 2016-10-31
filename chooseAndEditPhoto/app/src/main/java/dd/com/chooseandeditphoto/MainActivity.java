@@ -117,9 +117,10 @@ public class MainActivity extends AppCompatActivity {
                             startActivityForResult(intent_camera, 2);
 
                         } else {
+//                            Intent intent_media = new Intent(
+//                                    Intent.ACTION_PICK, null);//直接选择相册
                             Intent intent_media = new Intent(
-                                    Intent.ACTION_PICK, null);
-
+                                    Intent.ACTION_GET_CONTENT, null);//选择文件
                             intent_media
                                     .setDataAndType(
                                             MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
